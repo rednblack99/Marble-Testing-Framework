@@ -18,5 +18,12 @@ function expectToEqual(assertion, expectation) {
 }
 
 function expectToThrow(assertion, expectation) {
-  expectToEqual(assertion, expectation)
+  var error;
+  try {
+    eval(assertion);
+  }
+  catch(e) {
+    error = e.message
+  }
+  expectToEqual(error, expectation)
 }
