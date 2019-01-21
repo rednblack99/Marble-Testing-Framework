@@ -7,6 +7,12 @@ function it(msg, fn) {
   describe(' ' + msg, fn)
 }
 
-function expect(value) {
-  return value;
+function expectToEqual(assertion, expectation) {
+  if (assertion === expectation) {
+    console.log("Pass - You're a hero!")
+    return true
+  } else {
+    console.log("Fail")
+    return false
+  }
 }
