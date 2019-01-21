@@ -9,10 +9,10 @@ function it(msg, fn) {
 
 function expectToEqual(assertion, expectation) {
   if (assertion === expectation) {
-    console.log("Pass - You're a hero!")
+    console.log(`%c Pass - You're a hero!` , 'color: #009200')
     return true
   } else {
-    console.log("Fail")
+    console.log(` %c Fail. Expected: ${expectation}. Got: ${assertion}.`, 'color: #ff0000')
     return false
   }
 }
