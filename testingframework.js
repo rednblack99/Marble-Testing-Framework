@@ -6,3 +6,7 @@ function describe(desc, fn) {
 function it(msg, fn) {
   describe(' ' + msg, fn)
 }
+
+function expect(value) {
+  return value;
+}
