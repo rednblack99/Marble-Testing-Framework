@@ -16,3 +16,7 @@ function expectToEqual(assertion, expectation) {
     return false
   }
 }
+
+function expectToThrow(assertion, expectation) {
+  expectToEqual(assertion, expectation)
+}
