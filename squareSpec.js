@@ -1,7 +1,7 @@
 describe('Square', function() {
 
-  let square = new Square(5);
-
+  let square = new Square(5)
+  
   it('can get the square of a number', function() {
     expectToEqual(square.area(), 25);
   });
@@ -13,4 +13,8 @@ describe('Square', function() {
   it('throws an error if passed a negative number', function() {
     expectToThrow("new Square(-4)", 'size should be a positive number')
   });
+
+  it('square is an instance of Square class', function() {
+    instanceOf(square, Square)
+  })
 });
